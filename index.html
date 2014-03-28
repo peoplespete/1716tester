@@ -6,9 +6,15 @@
 	<link href='http://fonts.googleapis.com/css?family=Mate:400,400italic' rel='stylesheet' type='text/css'>
 	<link href='normalize.css' rel='stylesheet' type='text/css'>
 	<link href='style.css' rel='stylesheet' type='text/css'>
+	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
-	<div class="wrapper">
+<!-- 	<div class="preloader"></div>	-->	<!--uncomment preloader if page is loading choppily-->
+	<div class="branding">
+		<img src="images/history-lessons-finish.jpg" alt="history lessons by clifton crais" class="branding-image-finish">
+		<img src="images/history-lessons-start.jpg" alt="history lessons by clifton crais" class="branding-image-start">
+	</div>
+	<div class="wrapper cf">
 		<h1>H1 Heading</h1>
 		<h2>H2 Heading</h2>
 		<h3>H3 Heading</h3>
@@ -35,12 +41,32 @@
 		<div class="main-nav-border">
 			<div class="main-nav-border-internal"></div>
 		</div>
-		<blockquote class="cf">
-			<span class="quote-icon">“</span> <!-- how to make curly quotes: http://cbracco.me/curly-quotes/ -->
-			<p class="quote">...Remarkable.</p>
-			<h4 class="quote-author">-Qoute Author</h4>
+		<blockquote class="praise">
+				<span class="quote-icon">“</span> <!-- how to make curly quotes: http://cbracco.me/curly-quotes/ -->
+				<p class="quote">...Remarkable.</p>
+				<h4 class="quote-author">-The Age</h4>
 		</blockquote>
+		<div class="praise-slider">
+			<blockquote class="praise">
+				<span class="quote-icon">“</span> <!-- how to make curly quotes: http://cbracco.me/curly-quotes/ -->
+				<p class="quote">...Remarkable.</p>
+				<h4 class="quote-author">-The Age</h4>
+			</blockquote>
+			<blockquote class="praise long-praise">
+				<span class="quote-icon">“</span> <!-- how to make curly quotes: http://cbracco.me/curly-quotes/ -->
+				<p class="quote">This memoir of anguish and struggle is a story of remarkable strength and unlikely, inexplicable resilience.</p>
+				<h4 class="quote-author">-Kirkus</h4>
+			</blockquote>
+			<blockquote class="praise">
+				<span class="quote-icon">“</span> <!-- how to make curly quotes: http://cbracco.me/curly-quotes/ -->
+				<p class="quote">[A] gripping biography.</p>
+				<h4 class="quote-author">-Barbara Bush, Women's History Review</h4>
+			</blockquote>
+		</div>
 	</div>
-</body>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+	<script src="js/main.js"></script>
+	</body>
 	
 </html>

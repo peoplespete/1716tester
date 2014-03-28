@@ -103,6 +103,16 @@ body{
 	line-height: 2.1rem;
 }
 
+.preloader{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width:100%;
+	height:100%;
+	background: #9feac2;
+	z-index: 101;
+}
+
 /* ---- TYPOGRAHY -----*/
 
 h1, h2, h3, h4{
@@ -179,6 +189,44 @@ h4{
 	text-align: right;
 }
 
+/* ---- Branding -----*/
+
+@-webkit-keyframes fade-out-branding {
+  100% { opacity: 0; }
+}
+@-moz-keyframes fade-out-branding {
+  100% { opacity: 0; }
+}
+@-o-keyframes fade-out-branding {
+  100% { opacity: 0;  }
+}
+@keyframes fade-out-branding {
+  100% { opacity: 0;  }
+}
+
+.branding{
+	position:relative;
+	min-height: 760px;
+}
+
+.branding-image-start, .branding-image-finish{
+	position: absolute;
+	top:0;
+	left:0;
+}
+
+.branding-image-start{
+	-webkit-animation: fade-out-branding 1s ease-in; /* Safari 4+ */
+	-moz-animation:    fade-out-branding 1s ease-in; /* Fx 5+ */
+	-o-animation:      fade-out-branding 1s ease-in; /* Opera 12+ */
+	animation:         fade-out-branding 1s ease-in; /* IE 10+ */
+	animation-fill-mode:forwards;
+	-webkit-animation-fill-mode:forwards; /* Safari and Chrome */
+	animation-delay:1s;
+	-webkit-animation-delay:1s; /* Safari and Chrome */
+}
+
+
 
 /* ---- MAIN CONTENT -----*/
 
@@ -197,11 +245,12 @@ h4{
 	border-bottom:5px solid #74aa8d; /* dark green */
 }
 
-blockquote{
+
+.praise{
 	width:calc(30.5rem - 66px);
-	background: #cff4e0; /* light mint green */;
+	background: #cff4e0; /* light mint green */
 	border:3px solid #FFF;
-	outline:3px solid #cff4e0; /* light mint green */;
+	outline:3px solid #cff4e0; /* light mint green */
 	padding: 3rem;
 	margin:2rem 0;
 	float:left;
@@ -209,7 +258,7 @@ blockquote{
 
 .quote-icon{
 	font-size: 6rem;
-	line-height: 1rem;
+	line-height: 3rem;
 	float:left;
 	padding:1.5rem 0;
 	margin-top: 0;
@@ -220,13 +269,78 @@ blockquote{
 	font-size:3rem; 
 	float:right;
 	width:calc(100% - 5rem);
-	margin:0 0 1.5rem;
+	margin:0 0 1rem;
+	line-height: 4rem;
 }
 
 .quote-author{
 	float:right;
 	width:calc(100% - 5rem);
 	margin:0;
+}
+
+/*--PRAISE ON REVIEWS PAGE ONLY--*/
+
+@-webkit-keyframes fade-in-praise {
+  100% { opacity: 1; }
+}
+@-moz-keyframes fade-in-praise {
+  100% { opacity: 1; }
+}
+@-o-keyframes fade-in-praise {
+  100% { opacity: 1;  }
+}
+@keyframes fade-in-praise {
+  100% { opacity: 1;  }
+}
+
+.praise-slider{
+	width: 954px;
+	margin-left: 3px;
+	display:table;
+}
+
+.praise-slider .praise{
+	margin-left: 2rem;
+	opacity:0;
+	-webkit-animation: fade-in-praise 1s ease-in; /* Safari 4+ */
+	-moz-animation:    fade-in-praise 1s ease-in; /* Fx 5+ */
+	-o-animation:      fade-in-praise 1s ease-in; /* Opera 12+ */
+	animation:         fade-in-praise 1s ease-in; /* IE 10+ */
+	animation-fill-mode:forwards;
+	-webkit-animation-fill-mode:forwards; /* Safari and Chrome */ 
+}
+
+/*--show praise without fade in older versions of ie--*/
+.lt-ie9 .praise-slider .praise{
+	opacity:1;
+}
+
+.praise-slider .praise:nth-child(1n){
+	margin-left: 0;
+}
+
+.praise-slider .praise:nth-child(2n){
+	background: #cccccc; /* light grey */
+	outline:3px solid #cccccc; /* light grey */
+	margin-left: 2rem;
+	animation-delay:1s;
+	-webkit-animation-delay:1s; /* Safari and Chrome */
+}
+
+.praise-slider .praise:nth-child(3n){
+	background: #74aa8d; /* dark green */
+	outline:3px solid #74aa8d; /* dark green */
+	color:#FFF;
+	margin-left: 2rem;
+	animation-delay:2s;
+	-webkit-animation-delay:2s; /* Safari and Chrome */
+}
+
+.praise-slider .long-praise .quote{
+	font-size:18px;
+	font-size:1.8rem;
+	line-height: 2.4rem; 
 }
 
 
